@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^1.0.3
   google_fonts: ^2.3.1
   lottie: ^1.2.2
+  syncfusion_flutter_gauges: ^19.4.54
 
 dev_dependencies:
   flutter_test:

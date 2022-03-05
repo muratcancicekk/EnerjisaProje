@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sadeneme/home_page/home_page.dart';
+import 'package:sadeneme/nav_bar.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -65,7 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                         isChecked = !isChecked;
                         setState(() {});
                       }),
-                   Text(
+                  Text(
                     "Beni hatırla",
                     style: GoogleFonts.roboto(fontWeight: FontWeight.bold),
                   ),
@@ -75,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     child: TextButton(
                       onPressed: () {},
-                      child:  Text(
+                      child: Text(
                         "Parolamı unuttum",
                         style: GoogleFonts.roboto(
                             color: const Color.fromARGB(255, 40, 122, 50),
@@ -92,12 +93,12 @@ class _LoginPageState extends State<LoginPage> {
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const HomePage()));
+                      MaterialPageRoute(builder: (context) => const NavBar()));
                 },
-                child:  Text(
+                child: Text(
                   "Giriş",
-                  style:
-                      GoogleFonts.roboto(color: Colors.white, fontWeight: FontWeight.w800),
+                  style: GoogleFonts.roboto(
+                      color: Colors.white, fontWeight: FontWeight.w800),
                 ),
                 style: ElevatedButton.styleFrom(
                   primary: const Color.fromARGB(255, 40, 122, 50),
