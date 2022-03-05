@@ -14,6 +14,10 @@ class _ControlPageState extends State<ControlPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+      ),
       backgroundColor: const Color.fromARGB(255, 178, 240, 195),
       body: Padding(
         padding: EdgeInsets.symmetric(
@@ -30,19 +34,19 @@ class _ControlPageState extends State<ControlPage> {
               ),
             ),
             Spacer(),
-            Listtilewidget(svg: SvgPicture.asset("assets/daily.svg"), text: " Günlük "),
+            Listtilewidget(
+                svg: SvgPicture.asset("assets/daily.svg"), text: " Günlük "),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Listtilewidget(svg: SvgPicture.asset("assets/daily.svg"), text: " Haftalık "),
+            Listtilewidget(
+                svg: SvgPicture.asset("assets/daily.svg"), text: " Haftalık "),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
-            Listtilewidget(svg: SvgPicture.asset("assets/daily.svg"), text: " Aylık "),
+            Listtilewidget(
+                svg: SvgPicture.asset("assets/daily.svg"), text: " Aylık "),
             Spacer(),
-
-
-            
           ],
         ),
       ),
@@ -52,15 +56,15 @@ class _ControlPageState extends State<ControlPage> {
 
 class Listtilewidget extends StatelessWidget {
   const Listtilewidget({
-    Key? key, required this.svg, required this.text,
+    Key? key,
+    required this.svg,
+    required this.text,
   }) : super(key: key);
   final SvgPicture svg;
   final String text;
 
-
   @override
   Widget build(BuildContext context) {
-    
     return ListTile(
       tileColor: Colors.white70,
       onTap: () {},

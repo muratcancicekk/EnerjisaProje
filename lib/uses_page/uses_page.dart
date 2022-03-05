@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../uses_control_page/control_page.dart';
+
 class UsesPage extends StatefulWidget {
   const UsesPage({Key? key}) : super(key: key);
 
@@ -20,12 +22,11 @@ class _UsesPageState extends State<UsesPage> {
             SvgPicture.asset("assets/logos.svg",
                 height: MediaQuery.of(context).size.height * 0.04),
           ],
-          backgroundColor: const Color.fromARGB(255, 40, 122, 50),
+          backgroundColor: Colors.white,
           title: Text(
             "Energy Savers",
             style: GoogleFonts.roboto(
-              color: const Color.fromARGB(255, 209, 214, 209),
-            ),
+                color: Colors.black, fontWeight: FontWeight.w500),
           ),
           centerTitle: true,
         ),
@@ -37,10 +38,37 @@ class _UsesPageState extends State<UsesPage> {
             height: MediaQuery.of(context).size.height,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                UsesCard(svg: "assets/useselec.svg", text: "Elektrik"),
-                UsesCard(svg: "assets/useswater.svg", text: "Su"),
-                UsesCard(svg: "assets/usesradiot.svg", text: "Doğalgaz"),
+              children: [
+                UsesCard(
+                  svg: "assets/useselec.svg",
+                  text: "Elektrik",
+                  onPress: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ControlPage()));
+                  },
+                ),
+                UsesCard(
+                  svg: "assets/useswater.svg",
+                  text: "Su",
+                  onPress: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ControlPage()));
+                  },
+                ),
+                UsesCard(
+                  svg: "assets/usesradiot.svg",
+                  text: "Doğalgaz",
+                  onPress: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ControlPage()));
+                  },
+                ),
               ],
             ),
           ),
@@ -55,45 +83,50 @@ class UsesCard extends StatelessWidget {
     Key? key,
     required this.svg,
     required this.text,
+    required this.onPress,
   }) : super(key: key);
   final String svg;
   final String text;
+  final VoidCallback onPress;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(0.5),
-            spreadRadius: 5,
-            blurRadius: 7,
-            offset: const Offset(0, 3), // changes position of shadow
-          ),
-        ],
-      ),
-      height: MediaQuery.of(context).size.height * 0.18,
-      width: double.infinity,
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width * 0.08),
-        child: Row(
-          children: [
-            SvgPicture.asset(
-              svg,
-              height: MediaQuery.of(context).size.height * 0.12,
+    return InkWell(
+      onTap: onPress,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 5,
+              blurRadius: 7,
+              offset: const Offset(0, 3), // changes position of shadow
             ),
-            const Spacer(),
-            Text(
-              text,
-              style: GoogleFonts.roboto(
-                  fontSize: MediaQuery.of(context).size.height * 0.03,
-                  fontWeight: FontWeight.w500),
-            ),
-            const Spacer(),
           ],
+        ),
+        height: MediaQuery.of(context).size.height * 0.18,
+        width: double.infinity,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * 0.08),
+          child: Row(
+            children: [
+              SvgPicture.asset(
+                svg,
+                height: MediaQuery.of(context).size.height * 0.12,
+              ),
+              const Spacer(),
+              Text(
+                text,
+                style: GoogleFonts.roboto(
+                    fontSize: MediaQuery.of(context).size.height * 0.03,
+                    fontWeight: FontWeight.w500),
+              ),
+              const Spacer(),
+            ],
+          ),
         ),
       ),
     );

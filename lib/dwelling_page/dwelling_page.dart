@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sadeneme/add_page/add_page.dart';
 
 class DwellingPage extends StatefulWidget {
   const DwellingPage({Key? key}) : super(key: key);
@@ -18,14 +19,18 @@ class _DwellingPageState extends State<DwellingPage> {
       child: Scaffold(
         backgroundColor: Color.fromARGB(255, 178, 240, 195),
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 40, 122, 50),
-          title:  Row(
+          actions: [
+            SvgPicture.asset("assets/logos.svg",
+                height: MediaQuery.of(context).size.height * 0.04),
+          ],
+          backgroundColor: Colors.white,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "Energy Saver",
                 style: GoogleFonts.roboto(
-                  color: const Color.fromARGB(255, 209, 214, 209),
-                ),
+                    color: Colors.black, fontWeight: FontWeight.w500),
               )
             ],
           ),
@@ -48,7 +53,10 @@ class _DwellingPageState extends State<DwellingPage> {
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: const Color.fromARGB(255, 40, 122, 50),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => AddPage()));
+          },
           child: const Icon(Icons.add),
         ),
       ),
