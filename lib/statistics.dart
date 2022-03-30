@@ -26,7 +26,7 @@ class _StatisticsState extends State<Statistics> {
                   showLabels: false,
                   pointers: [
                     MarkerPointer(
-                      value: 60,
+                      value: 289,
                       markerHeight: 20,
                       markerWidth: 20,
                     )
