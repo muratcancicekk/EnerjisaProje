@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 import 'package:flutter/cupertino.dart';
+=======
+>>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,10 +19,10 @@ class _ControlPageState extends State<ControlPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(255, 178, 240, 195),
         foregroundColor: Colors.black,
       ),
-      backgroundColor: const Color.fromARGB(255, 178, 240, 195),
+      backgroundColor: Colors.grey.shade200,
       body: Padding(
         padding: EdgeInsets.symmetric(
             horizontal: MediaQuery.of(context).size.width * 0.08,
@@ -27,27 +30,32 @@ class _ControlPageState extends State<ControlPage> {
         child: Column(
           children: [
             Text(
-              "Görüntülemek İstediğiniz Zaman Dilimini Seçiniz.",
+              "Select the time period you want to see your usage  ",
               style: GoogleFonts.roboto(
                 color: Colors.black,
-                fontSize: MediaQuery.of(context).size.height * 0.025,
-                fontWeight: FontWeight.bold,
+                fontSize: MediaQuery.of(context).size.height * 0.03,
+                fontWeight: FontWeight.w400,
               ),
             ),
             Spacer(),
             Listtilewidget(
-                svg: SvgPicture.asset("assets/daily.svg"), text: " Günlük "),
+                svg: SvgPicture.asset("assets/daily.svg"), text: " Daily "),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
             Listtilewidget(
-                svg: SvgPicture.asset("assets/daily.svg"), text: " Haftalık "),
+                svg: SvgPicture.asset("assets/daily.svg"), text: " Weekly "),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.03,
             ),
             Listtilewidget(
+<<<<<<< Updated upstream
                 svg: SvgPicture.asset("assets/daily.svg"), text: " Aylık "),
             Spacer(),
+=======
+                svg: SvgPicture.asset("assets/daily.svg"), text: " Monthly "),
+            const Spacer(),
+>>>>>>> Stashed changes
           ],
         ),
       ),
@@ -74,7 +82,7 @@ class Listtilewidget extends StatelessWidget {
       },
       leading: SizedBox(
         height: MediaQuery.of(context).size.height * 0.1,
-        width: MediaQuery.of(context).size.height * 0.1,
+        width: MediaQuery.of(context).size.width * 0.1,
         child: svg,
       ),
       title: Text(

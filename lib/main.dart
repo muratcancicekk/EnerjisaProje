@@ -6,7 +6,10 @@ import 'package:sadeneme/statistics.dart';
 import 'package:sadeneme/uses_control_page/control_page.dart';
 import 'package:sadeneme/uses_page/uses_page.dart';
 import 'login_page/login_page.dart';
+<<<<<<< Updated upstream
 import 'nav_bar.dart';
+=======
+>>>>>>> Stashed changes
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +24,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
-          backgroundColor: Color.fromARGB(255, 178, 240, 195),
+          backgroundColor: Colors.white,
           body: LoginPage(),
         ),
       ),
