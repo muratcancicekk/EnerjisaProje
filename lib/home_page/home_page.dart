@@ -15,11 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-<<<<<<< Updated upstream
         backgroundColor: Color.fromARGB(255, 178, 240, 195),
-=======
-        backgroundColor: Colors.grey.shade100,
->>>>>>> Stashed changes
         body: Padding(
           padding: EdgeInsets.symmetric(
               vertical: MediaQuery.of(context).size.width * 0.1,

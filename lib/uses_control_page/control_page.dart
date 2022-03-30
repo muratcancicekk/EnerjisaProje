@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
 import 'package:flutter/cupertino.dart';
-=======
->>>>>>> Stashed changes
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,13 +46,8 @@ class _ControlPageState extends State<ControlPage> {
               height: MediaQuery.of(context).size.height * 0.03,
             ),
             Listtilewidget(
-<<<<<<< Updated upstream
                 svg: SvgPicture.asset("assets/daily.svg"), text: " Aylık "),
             Spacer(),
-=======
-                svg: SvgPicture.asset("assets/daily.svg"), text: " Monthly "),
-            const Spacer(),
->>>>>>> Stashed changes
           ],
         ),
       ),

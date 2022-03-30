@@ -46,7 +46,6 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-<<<<<<< Updated upstream
             const TextField1(text: "İsim", htext: "İsminizi giriniz"),
             const TextField1(
               text: "E-posta",
@@ -56,24 +55,6 @@ class _LoginPageState extends State<LoginPage> {
               text: "Parola",
               htext: "Parolanızı giriniz",
               icon: Icon(Icons.visibility),
-=======
-            const TextField1(
-              text: "User Name",
-              htext: "Enter your user name",
-              obs: false,
-            ),
-            const TextField1(
-              text: "E-mail",
-              htext: "Enter your e-mail",
-              obs: false,
-            ),
-            const TextField1(
-              text: "Password",
-              htext: "Enter your password",
-              icon: Icon(Icons.visibility_off),
-              inputype: TextInputType.numberWithOptions(),
-              obs: true,
->>>>>>> Stashed changes
             ),
             Padding(
               padding: EdgeInsets.symmetric(
@@ -188,11 +169,6 @@ class TextField1 extends StatelessWidget {
     required this.text,
     this.htext,
     this.icon,
-<<<<<<< Updated upstream
-=======
-    this.inputype,
-    required this.obs,
->>>>>>> Stashed changes
   }) : super(key: key);
   final String text;
   final String? htext;

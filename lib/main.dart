@@ -6,10 +6,7 @@ import 'package:sadeneme/statistics.dart';
 import 'package:sadeneme/uses_control_page/control_page.dart';
 import 'package:sadeneme/uses_page/uses_page.dart';
 import 'login_page/login_page.dart';
-<<<<<<< Updated upstream
 import 'nav_bar.dart';
-=======
->>>>>>> Stashed changes
 
 void main() {
   runApp(const MyApp());

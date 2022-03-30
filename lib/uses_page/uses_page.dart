@@ -18,7 +18,6 @@ class _UsesPageState extends State<UsesPage> {
       child: Scaffold(
         backgroundColor: Colors.grey.shade100,
         appBar: AppBar(
-<<<<<<< Updated upstream
           actions: [
             SvgPicture.asset("assets/logos.svg",
                 height: MediaQuery.of(context).size.height * 0.04),
@@ -30,13 +29,6 @@ class _UsesPageState extends State<UsesPage> {
                 color: Colors.black, fontWeight: FontWeight.w500),
           ),
           centerTitle: true,
-=======
-          toolbarHeight: 70,
-          foregroundColor: Colors.green.shade900,
-          backgroundColor: const Color.fromARGB(255, 178, 240, 195),
-          title: SvgPicture.asset("assets/logos.svg",
-              height: MediaQuery.of(context).size.height * 0.05),
->>>>>>> Stashed changes
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(
